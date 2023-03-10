@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* dark theme */
+:root{
+	--mainColor: black;
+	--backgroundDarkMode: white;
+
+    --iconcolor: #1565c0;
+}
+
+.darkmode{
+	/*chuyen sang darkmode*/
+	--mainColor: white!important;
+	--backgroundDarkMode: #23252f!important;
+
+    --iconcolor: #bbdefb;
+}
+
+.on{
+	display: block;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--backgroundDarkMode);
+}
+
+/* phan header */
+
+.header{
+    background: #47d747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 65%;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 23px;
+    color: var(--mainColor);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+}
+
+.fa-search,
+.fa-moon{
+    color: var(--mainColor);
+    font-size: 22px;
+}
+
+.fa-search:hover,
+.fa-moon:hover{
+    cursor: pointer;
+}
+
+.list li{
+    list-style: none;
+    padding: 8px;
+    font-weight: bold;
+}
+.list li a{
+    text-decoration: none;
+    color: var(--mainColor);
+}
+
+/* 
+phan about */
+
+
+.about{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 65%;
+    height: 1000px;
+    
+    padding-top: 60px;
+}
+
+.col-3{
+    width: 30%;
+}
+
+.avatar{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+}
+
+.fullname{
+    font-size: 38px;
+    font-weight: 300;
+    color: var(--mainColor);
+    margin: 20px 0 10px;
+}
+
+.graduation{
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--mainColor);
+    margin: 0 0 10px;
+}
+
+.school{
+    text-decoration: none;
+    color: #1565c0;
+    line-height: 30px;
+}
+
+.school:hover{
+    text-decoration: underline;
+}
+
+.network-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.network-icon > li{
+    list-style: none;
+    font-size: 45px;
+    padding: 5px;
+}
+
+.network-icon > li:hover{
+    transform: scale(1.3);
+}
+
+.network-icon > li > a{
+    color: var(--iconcolor);
+}
+
+
+.col-7{
+    width: 70%;
+    padding-left: 40px;
+}
+
+.unset-underline{
+    color: #1565c0;
+    text-decoration: none;
+}
+
+.col-7 > h1{
+    color: var(--mainColor);
+    letter-spacing: 2px;
+    font-size: 46px;
+    font-weight: 400;
+}
+
+.article-style {
+    padding-top: 10px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.article-style > p{
+    font-family: 'Roboto', sans-serif;
+    color: var(--mainColor);
+    letter-spacing: 1px;
+    font-size: 21px;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    line-height: 35px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.graduation-list{
+    margin-top: -5px;
+}
+
+.section-subheading{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.chiadoi{
+    display: flex;
+    align-items: baseline;
+}
+
+.chiadoi > i{
+    color: var(--iconcolor);
+    font-size: 20px;
+}
+
+.ul-interests{
+    padding-top: 20px;
+    line-height: 20px;
+    padding-left: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--mainColor);
+    letter-spacing: 1px;
+}
+
+.description{
+    padding-top: 20px;
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--mainColor);
+    letter-spacing: 1px;
+    padding-left: 10px;
+}
+
+/*Hover images effect*/
+
+  .image-effect{
+	width: auto; 
+	flex-wrap: wrap;
+	height: auto;
+	word-break: break-all;     
+	padding: 5px 0;    
+  }
+
+  .image-effect_hover:hover > h5 .text-b{
+	color: var(--mainColor)!important ;
+  }
+  .image-effect_test{
+	overflow: hidden;
+	cursor: pointer;
+	width: 100%;
+	height: auto;
+  }
+  .effect_test{
+	-webkit-animation: scaledown .4s ease;
+	animation: scaledown .4s linear;
+	animation-fill-mode: forwards;
+	transform-origin: 50% 50%;
+	height: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+  }
+  .effect_test:hover{
+	z-index: 100;
+	-webkit-animation: scale .4s ease;
+	animation: scale 0.4s linear;
+	animation-fill-mode: forwards;
+	transform-origin: 50% 50% ;
+  }
+
+  @keyframes scaledown{
+	0%{
+	  -webkit-transform: scale(1.1);
+	  transform: scale(1.1);
+	}
+	100%{
+	  -webkit-transform: scale(1.0);
+	  transform: scale(1.0);
+	}
+  } 
+
+  @keyframes scale{
+	0%{
+	  transform: scale(1);
+	  -webkit-transform: scale(1);
+	}
+	100%{
+	  transform: scale(1.1);
+	  -webkit-transform: scale(1.1);
+	}
+  } 
+/*End Hover images effect*/
