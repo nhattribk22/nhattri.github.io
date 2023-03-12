@@ -21,10 +21,6 @@
     --iconcolor: #bbdefb;
 }
 
-.on{
-	display: block;
-}
-
 body{
     font-family: 'Poppins', sans-serif;
     background: var(--backgroundDarkMode);
@@ -33,10 +29,22 @@ body{
 /* phan header */
 
 .header{
-    background: #47d747;
+    background: var(--backgroundDarkMode);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 1px 5px -2px grey;
+
+}
+.slidemenu{
+    display: none;
+}
+ .slidemenu > li{
+    list-style: none;
+    padding: 0 0px 0px 13px;
+
 }
 
 nav{
@@ -49,7 +57,7 @@ nav{
 
 .logo{
     font-weight: bold;
-    font-size: 23px;
+    font-size: 22px;
     color: var(--mainColor);
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,6 +72,15 @@ nav{
 .fa-moon{
     color: var(--mainColor);
     font-size: 22px;
+    list-style: none;
+    padding-right: 0;
+}
+
+#btnBar{
+    color: var(--mainColor);
+    font-size: 22px;
+    list-style: none;
+    display: none;
 }
 
 .fa-search:hover,
@@ -92,11 +109,11 @@ phan about */
     width: 65%;
     height: 1000px;
     
-    padding-top: 60px;
+    padding-top: 140px;
 }
 
 .col-3{
-    width: 30%;
+    width: 35%;
 }
 
 .avatar{
@@ -142,7 +159,7 @@ phan about */
 }
 
 .network-icon > li:hover{
-    transform: scale(1.3);
+    transform: scale(1.5);
 }
 
 .network-icon > li > a{
@@ -151,7 +168,7 @@ phan about */
 
 
 .col-7{
-    width: 70%;
+    width: 65%;
     padding-left: 40px;
 }
 
@@ -255,7 +272,6 @@ phan about */
 	animation-fill-mode: forwards;
 	transform-origin: 50% 50%;
 	height: 100%;
-	aspect-ratio: 16/9;
 	object-fit: cover;
   }
   .effect_test:hover{
@@ -288,3 +304,22 @@ phan about */
 	}
   } 
 /*End Hover images effect*/
+
+/*Go to top*/
+.go-to-top{
+	position: fixed;
+	display: none;
+	z-index: 1001;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
+	background: #47d747;
+  }
+.go-to-top:hover{
+opacity: 0.8;
+}
+i.fas.fa-chevron-up {
+padding: 10px;
+font-size: 20px;
+color: white;
+}

@@ -27,3 +27,23 @@ darkModeToggle.click(function(){
         disableDarkMode();
     }
 });
+//btn clik bar
+
+$('#btnBar').click(function () {
+    $('.list').toggleClass("list-on");
+});
+
+//go to top
+window.addEventListener("scroll", function(){
+    //go to top
+    var showGoToTop = 700;
+    if ($(this).scrollTop() >= showGoToTop) 
+        $(".go-to-top").fadeIn();       
+    else
+        $(".go-to-top").fadeOut();               
+});
+
+//go to top
+$(".go-to-top").click(function(){
+    $('html, body').animate({ scrollTop: 0 });
+});
