@@ -61,6 +61,7 @@ nav{
     color: var(--mainColor);
     background-size: cover;
     background-repeat: no-repeat;
+    margin-left: 14px;
 }
 
 .list{
@@ -281,6 +282,7 @@ phan about */
 	animation-fill-mode: forwards;
 	transform-origin: 50% 50% ;
   }
+
 
   @keyframes scaledown{
 	0%{
